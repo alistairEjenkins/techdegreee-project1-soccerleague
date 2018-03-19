@@ -1,6 +1,9 @@
+# File : league_builder.py
+# Treehouse Techdegree Python Web Development
+# Assignment 1 - Soccer League
 import csv, random
 
-teams = ['Sharks', 'Dragons', 'Raptors']
+
 team_info = {'Sharks' : ['15.00', '9/1' ], 'Dragons' : ['12.00', '8/28'], 'Raptors' : ['14.30', '27/8'] }
 team_roster = {}
 player_records = []
@@ -14,6 +17,23 @@ def create_player_records():
             player_records.append(row)
     # deleting column header text from list
     del player_records[0]
+
+
+def create_teams():
+
+    exp_players, nexp_players = divide_players_by_experience()
+
+    # calculating the number of experienced and non-experienced players required for each team
+    exp_players_needed = players_needed(exp_players)
+    nexp_players_needed = players_needed(nexp_players)
+
+    # adding experienced and non-experienced players to team rosters
+    for team in team_info.keys():
+
+        exp_players_in_team = pick_players(exp_players,exp_players_needed)
+        nexp_player_in_team = pick_players(nexp_players,nexp_players_needed)
+        team_roster[team] = exp_players_in_team + nexp_player_in_team
+
 
 def divide_players_by_experience():
 
@@ -29,6 +49,12 @@ def divide_players_by_experience():
 
     return exp_play, nexp_play
 
+
+def players_needed(players):
+
+    return len(players) // len(team_info)
+
+
 def pick_players(players, players_needed):
 
     team_members = []
@@ -39,24 +65,6 @@ def pick_players(players, players_needed):
 
     return team_members
 
-def players_needed(players):
-
-    return len(players) // len(teams)
-
-def create_teams():
-
-    exp_players, nexp_players = divide_players_by_experience()
-
-    # calculating the number of experienced and non-experienced players required for each team
-    exp_players_needed = players_needed(exp_players)
-    nexp_players_needed = players_needed(nexp_players)
-
-    #
-    for team in teams:
-
-        exp_players_in_team = pick_players(exp_players,exp_players_needed)
-        nexp_player_in_team = pick_players(nexp_players,nexp_players_needed)
-        team_roster[team] = exp_players_in_team + nexp_player_in_team
 
 def write_teams_to_file():
 

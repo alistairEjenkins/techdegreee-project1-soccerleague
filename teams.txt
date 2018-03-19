@@ -1,0 +1,21 @@
+Sharks
+Joe Smith, 42, YES, Jim and Jan Smith
+Phillip Helm, 44, YES, Thomas Helm and Eva Jones
+Jill Tanner, 36, YES, Clara Tanner
+Eva Gordon, 45, NO, Wendy and Mike Gordon
+Sammy Adams, 45, NO, Jeff Adams
+Joe Kavalier, 39, NO, Sam and Elaine Kavalier
+Dragons
+Les Clay, 42, YES, Wynonna Brown
+Bill Bon, 43, YES, Sara and Jenny Bon
+Diego Soto, 41, YES, Robin and Sarika Soto
+Matt Gill, 40, NO, Charles and Sylvia Gill
+Chloe Alaska, 47, NO, David and Jamie Alaska
+Arnold Willis, 43, NO, Claire Willis
+Raptors
+Herschel Krustofski, 45, YES, Hyman and Rachel Krustofski
+Karl Saygan, 42, YES, Heather Bledsoe
+Suzane Greenberg, 44, YES, Henrietta Dumas
+Sal Dali, 41, NO, Gala Dali
+Ben Finkelstein, 44, NO, Aaron and Jill Finkelstein
+Kimmy Stein, 41, NO, Bill and Hillary Stein
